@@ -1,0 +1,11 @@
+/* Portfolio.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.portfolioContainer {
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Copy all the CSS from the styled-jsx section here, removing the dots from class names */
