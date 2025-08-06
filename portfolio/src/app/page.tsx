@@ -830,7 +830,7 @@ export default function Portfolio() {
                 <span className="tech-tag">TypeScript</span>
                 <span className="tech-tag">Next.js</span>
               </div>
-              <a href="#" className="project-link" target='_blank'>
+              <a href="https://github.com/yousifalani03/Portfolio" className="project-link" target='_blank'>
                 View Project →
               </a>
             </div>
