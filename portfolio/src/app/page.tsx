@@ -61,42 +61,44 @@ export default function Portfolio() {
         }
 
         .container {
-          max-width: 1200px;
+          max-width: 1000px;
           margin: 0 auto;
-          padding: 0 2rem;
+          padding: 0 1.5rem;
         }
 
         .header {
-          height: 100vh;
+          min-height: 100vh;
           display: flex;
           align-items: center;
           justify-content: center;
           position: relative;
+          padding: 2rem 0;
         }
 
         .profile-container {
           text-align: center;
           position: relative;
+          padding-top: 2rem;
         }
 
         .profile-image {
-          width: 300px;
-          height: 300px;
+          width: 240px;
+          height: 240px;
           border-radius: 50%;
-          margin: 0 auto 2rem;
+          margin: 0 auto 1.5rem;
           position: relative;
           background: linear-gradient(45deg, var(--primary), var(--secondary));
-          padding: 4px;
+          padding: 3px;
           animation: profilePulse 3s ease-in-out infinite;
         }
 
         .profile-image::before {
           content: '';
           position: absolute;
-          top: -10px;
-          left: -10px;
-          right: -10px;
-          bottom: -10px;
+          top: -8px;
+          left: -8px;
+          right: -8px;
+          bottom: -8px;
           border-radius: 50%;
           background: linear-gradient(45deg, var(--primary), var(--accent), var(--secondary));
           z-index: -1;
@@ -112,9 +114,16 @@ export default function Portfolio() {
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 4rem;
+          font-size: 3rem;
           position: relative;
           overflow: hidden;
+        }
+
+        .profile-pic {
+          width: 100% !important;
+          height: 100% !important;
+          border-radius: 50%;
+          object-fit: cover;
         }
 
         @keyframes profilePulse {
@@ -128,20 +137,20 @@ export default function Portfolio() {
         }
 
         .name-title {
-          font-size: 3.5rem;
+          font-size: 2.8rem;
           font-weight: 700;
           background: linear-gradient(135deg, var(--primary), var(--secondary));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          margin-bottom: 1rem;
+          margin-bottom: 0.8rem;
           animation: textGlow 2s ease-in-out infinite alternate;
         }
         .student-tagline {
-          font-size: 1.6rem;
+          font-size: 1.3rem;
           font-weight: 400;
           color: var(--white);
-          margin-bottom: 1.5rem;
+          margin-bottom: 1.2rem;
         }
         @keyframes textGlow {
           from { filter: brightness(1); }
@@ -149,11 +158,11 @@ export default function Portfolio() {
         }
 
         .subtitle {
-          font-size: 1.6rem;
+          font-size: 1.3rem;
           color: var(--white);
           font-weight: 300;
-          max-width: 600px;
-          margin: 0 auto 3rem;
+          max-width: 500px;
+          margin: 0 auto 2.5rem;
           line-height: 1.6;
         }
 
@@ -161,10 +170,10 @@ export default function Portfolio() {
           background: rgba(255, 255, 255, 0.03);
           backdrop-filter: blur(20px);
           border: 1px solid rgba(255, 255, 255, 0.1);
-          border-radius: 24px;
-          padding: 2.5rem;
-          max-width: 800px;
-          margin: 0 auto 3rem;
+          border-radius: 20px;
+          padding: 2rem;
+          max-width: 700px;
+          margin: 0 auto 2.5rem;
           position: relative;
           overflow: hidden;
           animation: aboutFadeIn 1s ease-out 0.5s both;
@@ -191,7 +200,7 @@ export default function Portfolio() {
           left: -2px;
           right: -2px;
           bottom: -2px;
-          border-radius: 26px;
+          border-radius: 22px;
           background: linear-gradient(45deg, var(--primary), var(--accent), var(--secondary), var(--primary));
           background-size: 400% 400%;
           z-index: -1;
@@ -234,13 +243,13 @@ export default function Portfolio() {
         }
 
         .about-title {
-          font-size: 1.8rem;
+          font-size: 1.6rem;
           font-weight: 600;
           background: linear-gradient(135deg, var(--accent), var(--primary));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          margin-bottom: 1.5rem;
+          margin-bottom: 1.2rem;
           text-align: center;
           position: relative;
           z-index: 2;
@@ -260,10 +269,10 @@ export default function Portfolio() {
 
         .about-content {
           color: #ccc;
-          line-height: 1.8;
-          font-size: 1.1rem;
+          line-height: 1.7;
+          font-size: 1rem;
           text-align: left;
-          margin-bottom: 2rem;
+          margin-bottom: 1.8rem;
           position: relative;
           z-index: 2;
           transition: all 0.3s ease;
@@ -276,19 +285,19 @@ export default function Portfolio() {
 
         .highlight-stats {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-          gap: 1.5rem;
-          margin-top: 2rem;
+          grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+          gap: 1.2rem;
+          margin-top: 1.8rem;
           position: relative;
           z-index: 2;
         }
 
         .stat-item {
           text-align: center;
-          padding: 1rem;
+          padding: 0.8rem;
           background: rgba(0, 212, 255, 0.05);
           border: 1px solid rgba(0, 212, 255, 0.2);
-          border-radius: 16px;
+          border-radius: 14px;
           transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           position: relative;
           overflow: hidden;
@@ -320,7 +329,7 @@ export default function Portfolio() {
         }
 
         .stat-number {
-          font-size: 1.8rem;
+          font-size: 1.5rem;
           font-weight: 700;
           background: linear-gradient(135deg, var(--primary), var(--accent));
           -webkit-background-clip: text;
@@ -332,20 +341,20 @@ export default function Portfolio() {
         }
 
         .stat-label {
-          font-size: 0.9rem;
+          font-size: 0.8rem;
           color: var(--gray);
-          margin-top: 0.5rem;
+          margin-top: 0.4rem;
           position: relative;
           z-index: 1;
         }
 
         .scroll-indicator {
           position: absolute;
-          bottom: -2rem;
+          bottom: -1.5rem;
           left: 50%;
           transform: translateX(-50%);
           animation: bounce 2s infinite;
-          font-size: 2rem;
+          font-size: 1.8rem;
           color: var(--primary);
         }
 
@@ -356,12 +365,12 @@ export default function Portfolio() {
         }
 
         .projects-section {
-          padding: 6rem 0;
+          padding: 5rem 0;
           position: relative;
         }
 
         .certifications-section {
-          padding: 6rem 0;
+          padding: 5rem 0;
           position: relative;
           background: rgba(255, 255, 255, 0.01);
           border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -370,16 +379,16 @@ export default function Portfolio() {
         .certifications-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 2rem;
-          margin-bottom: 4rem;
+          gap: 1.8rem;
+          margin-bottom: 3.5rem;
         }
 
         .cert-card {
           background: rgba(255, 255, 255, 0.05);
           backdrop-filter: blur(20px);
           border: 1px solid rgba(255, 255, 255, 0.1);
-          border-radius: 24px;
-          padding: 2rem;
+          border-radius: 20px;
+          padding: 1.8rem;
           position: relative;
           overflow: hidden;
           transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -408,44 +417,44 @@ export default function Portfolio() {
         }
 
         .cert-icon {
-          width: 70px;
-          height: 70px;
-          border-radius: 20px;
+          width: 60px;
+          height: 60px;
+          border-radius: 16px;
           background: linear-gradient(135deg, var(--secondary), var(--accent));
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 1.8rem;
-          margin-bottom: 1.2rem;
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
           position: relative;
           animation: iconFloat 4s ease-in-out infinite;
         }
 
         .cert-card h3 {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           font-weight: 600;
-          margin-bottom: 0.8rem;
+          margin-bottom: 0.7rem;
           color: var(--light);
         }
 
         .cert-card p {
           color: var(--gray);
           line-height: 1.6;
-          margin-bottom: 1.5rem;
-          font-size: 0.95rem;
+          margin-bottom: 1.3rem;
+          font-size: 0.9rem;
         }
 
         .cert-status {
           display: flex;
           justify-content: center;
-          margin-top: 1rem;
+          margin-top: 0.8rem;
         }
 
         .status-badge {
-          padding: 0.6rem 1.5rem;
-          border-radius: 25px;
+          padding: 0.5rem 1.2rem;
+          border-radius: 20px;
           font-weight: 600;
-          font-size: 0.85rem;
+          font-size: 0.8rem;
           text-transform: uppercase;
           letter-spacing: 1px;
           position: relative;
@@ -499,9 +508,9 @@ export default function Portfolio() {
 
         .section-title {
           text-align: center;
-          font-size: 3rem;
+          font-size: 2.5rem;
           font-weight: 600;
-          margin-bottom: 4rem;
+          margin-bottom: 3.5rem;
           background: linear-gradient(135deg, var(--light), var(--accent));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -510,17 +519,17 @@ export default function Portfolio() {
 
         .projects-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-          gap: 3rem;
-          margin-bottom: 4rem;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: 2.5rem;
+          margin-bottom: 3.5rem;
         }
 
         .project-card {
           background: rgba(255, 255, 255, 0.05);
           backdrop-filter: blur(20px);
           border: 1px solid rgba(255, 255, 255, 0.1);
-          border-radius: 24px;
-          padding: 2.5rem;
+          border-radius: 20px;
+          padding: 2rem;
           position: relative;
           overflow: hidden;
           transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -549,15 +558,15 @@ export default function Portfolio() {
         }
 
         .project-icon {
-          width: 80px;
-          height: 80px;
-          border-radius: 20px;
+          width: 70px;
+          height: 70px;
+          border-radius: 16px;
           background: linear-gradient(135deg, var(--primary), var(--accent));
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 2rem;
-          margin-bottom: 1.5rem;
+          font-size: 1.8rem;
+          margin-bottom: 1.2rem;
           position: relative;
           animation: iconFloat 4s ease-in-out infinite;
         }
@@ -568,33 +577,33 @@ export default function Portfolio() {
         }
 
         .project-card h3 {
-          font-size: 1.8rem;
+          font-size: 1.6rem;
           font-weight: 600;
-          margin-bottom: 1rem;
+          margin-bottom: 0.8rem;
           color: var(--light);
         }
 
         .project-card p {
           color: var(--gray);
           line-height: 1.7;
-          margin-bottom: 2rem;
-          font-size: 1.1rem;
+          margin-bottom: 1.8rem;
+          font-size: 1rem;
         }
 
         .tech-stack {
           display: flex;
           flex-wrap: wrap;
-          gap: 0.8rem;
-          margin-bottom: 2rem;
+          gap: 0.7rem;
+          margin-bottom: 1.8rem;
         }
 
         .tech-tag {
           background: rgba(0, 212, 255, 0.1);
           border: 1px solid rgba(0, 212, 255, 0.3);
           color: var(--primary);
-          padding: 0.5rem 1rem;
-          border-radius: 25px;
-          font-size: 0.9rem;
+          padding: 0.4rem 0.8rem;
+          border-radius: 20px;
+          font-size: 0.85rem;
           font-weight: 500;
           transition: all 0.3s ease;
         }
@@ -607,11 +616,11 @@ export default function Portfolio() {
         .project-link {
           display: inline-flex;
           align-items: center;
-          gap: 0.8rem;
+          gap: 0.7rem;
           color: var(--primary);
           text-decoration: none;
           font-weight: 600;
-          font-size: 1.1rem;
+          font-size: 1rem;
           transition: all 0.3s ease;
           position: relative;
         }
@@ -637,15 +646,15 @@ export default function Portfolio() {
 
         .contact-section {
           text-align: center;
-          padding: 6rem 0;
+          padding: 5rem 0;
           background: rgba(255, 255, 255, 0.02);
           border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .contact-title {
-          font-size: 3.5rem;
+          font-size: 3rem;
           font-weight: 600;
-          margin-bottom: 3rem;
+          margin-bottom: 2.5rem;
           background: linear-gradient(135deg, var(--secondary), var(--accent));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -655,18 +664,18 @@ export default function Portfolio() {
         .contact-links {
           display: flex;
           justify-content: center;
-          gap: 2rem;
+          gap: 1.8rem;
           flex-wrap: wrap;
         }
 
         .contact-link {
           display: inline-flex;
           align-items: center;
-          gap: 0.8rem;
-          padding: 1rem 2rem;
+          gap: 0.7rem;
+          padding: 0.8rem 1.8rem;
           background: rgba(255, 255, 255, 0.05);
           border: 2px solid rgba(255, 255, 255, 0.1);
-          border-radius: 50px;
+          border-radius: 40px;
           color: var(--light);
           text-decoration: none;
           font-weight: 500;
@@ -703,16 +712,16 @@ export default function Portfolio() {
           }
 
           .name-title {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
           }
 
           .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
           }
 
           .about-me-section {
-            padding: 2rem;
-            margin: 0 1rem 3rem;
+            padding: 1.5rem;
+            margin: 0 0.5rem 2rem;
           }
 
           .highlight-stats {
@@ -726,7 +735,7 @@ export default function Portfolio() {
           }
 
           .project-card {
-            padding: 2rem;
+            padding: 1.8rem;
           }
 
           .certifications-section {
@@ -735,11 +744,11 @@ export default function Portfolio() {
 
           .certifications-grid {
             grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: 1.5rem;
           }
 
           .cert-card {
-            padding: 2rem;
+            padding: 1.5rem;
           }
 
           .contact-links {
@@ -748,7 +757,7 @@ export default function Portfolio() {
           }
 
           .section-title {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
           }
         }
       `}</style>
@@ -765,8 +774,8 @@ export default function Portfolio() {
                   src="/pfp2.jpg"
                   alt="Yousif Alani"
                   className="profile-pic"
-                  width={300}
-                  height={300}
+                  width={240}
+                  height={240}
                   priority
                 />
               </div>
