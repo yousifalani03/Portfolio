@@ -20,13 +20,11 @@ phases:
   build:
     commands:
       - echo Building the application...
-      - cd portfolio
-      - npm run build
+      - npm run build     # <-- DO NOT cd portfolio again!
       - echo Build completed on `date`
   post_build:
     commands:
       - echo Deploying to S3...
-      - cd portfolio
       - aws s3 sync out/ s3://$BUCKET_NAME --delete --cache-control max-age=31536000,public
       - aws s3 cp s3://$BUCKET_NAME/index.html s3://$BUCKET_NAME/index.html --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
       - echo Creating CloudFront invalidation...
@@ -36,4 +34,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: 'portfolio/out'
+  base-directory: 'out'
