@@ -1,0 +1,6 @@
+{
+  "PortfolioInfrastructureStack": {
+    "BucketName": "yousif-portfolio-site-bucket",
+    "CloudFrontURL": "https://dlnjkvfsbwf68.cloudfront.net"
+  }
+}
