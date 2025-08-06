@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import styles from './Portfolio.module.css';
+import Image from 'next/image';
 
 export default function Portfolio() {
   return (
@@ -761,10 +761,13 @@ export default function Portfolio() {
           <div className="profile-container">
             <div className="profile-image">
               <div className="profile-inner">
-                <img
+                <Image
                   src="/pfp2.jpg"
                   alt="Yousif Alani"
                   className="profile-pic"
+                  width={300}
+                  height={300}
+                  priority
                 />
               </div>
             </div>
@@ -820,15 +823,17 @@ export default function Portfolio() {
             <div className="project-card">
               <div className="project-icon">🚀</div>
               <h3>Cloud-Native Portfolio with CI/CD</h3>
-              <p>Built this portfolio website using Next.js and TypeScript to showcase cloud projects and technical skills.
-                  Deployed via AWS Amplify with GitHub-connected CI/CD pipelines and AWS CDK for infrastructure as code.
-                  Demonstrates modern web development, automated deployments, and scalable cloud-native architecture.</p>
+              <p>Built and deployed this portfolio using Next.js and TypeScript to showcase cloud projects and technical skills.
+                 Automated CI/CD pipeline powered by AWS CodeBuild, S3, and CloudFront, with infrastructure provisioned using AWS CDK.
+                 Demonstrates scalable cloud-native architecture, global content delivery, and DevOps best practices.</p>
               <div className="tech-stack">
-                <span className="tech-tag">AWS Amplify</span>
+                <span className="tech-tag">AWS CDK</span>
                 <span className="tech-tag">CI/CD</span>
-                <span className="tech-tag">CDK</span>
-                <span className="tech-tag">TypeScript</span>
+                <span className="tech-tag">CloudFront</span>
+                <span className="tech-tag">S3</span>
+                <span className="tech-tag">CodeBuild</span>
                 <span className="tech-tag">Next.js</span>
+                <span className="tech-tag">TypeScript</span>
               </div>
               <a href="https://github.com/yousifalani03/Portfolio" className="project-link" target='_blank'>
                 View Project →
@@ -906,6 +911,7 @@ export default function Portfolio() {
               </a>
             </div>
           </div>
+          <div className="scroll-indicator">↓</div>
         </div>
       </section>
 
