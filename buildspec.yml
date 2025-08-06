@@ -8,7 +8,6 @@ phases:
       - echo Installing dependencies...
       - cd portfolio
       - npm install
-
   pre_build:
     commands:
       - echo Logging in to AWS...
@@ -18,14 +17,12 @@ phases:
       - ls -la
       - echo Looking for package.json...
       - find . -name "package.json" -type f
-
   build:
     commands:
       - echo Building the application...
       - cd portfolio
       - npm run build
       - echo Build completed on `date`
-
   post_build:
     commands:
       - echo Deploying to S3...
