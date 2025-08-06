@@ -123,34 +123,33 @@ export class PortfolioInfrastructureStack extends cdk.Stack {
         CLOUDFRONT_ID: { value: distribution.distributionId },
         NODE_ENV: { value: 'production' },
       },
+      
+      
       buildSpec: codebuild.BuildSpec.fromObject({
         version: '0.2',
         phases: {
+          install: {
+            'runtime-versions': {
+              nodejs: '18',
+            },
+            commands: [
+              'echo Installing dependencies...',
+              "cd portfolio",
+              'npm install',
+            ],
+          },
           pre_build: {
             commands: [
               'echo Logging in to AWS...',
               'aws --version',
               'echo Build started on `date`',
-              'echo Checking directory structure...',
+              'echo Current directory is: $(pwd)',
               'ls -la',
-              'echo Looking for package.json...',
-              'find . -name "package.json" -type f',
-            ],
-          },
-          install: {
-            'runtime-versions': {
-              nodejs: '18', // Specify Node.js version
-            },
-            commands: [
-              'echo Installing dependencies...',
-              'cd portfolio',
-              'npm install',
             ],
           },
           build: {
             commands: [
               'echo Building the application...',
-              'cd portfolio',
               'npm run build',
               'echo Build completed on `date`',
             ],
@@ -158,7 +157,6 @@ export class PortfolioInfrastructureStack extends cdk.Stack {
           post_build: {
             commands: [
               'echo Deploying to S3...',
-              'cd portfolio',
               'aws s3 sync out/ s3://$BUCKET_NAME --delete --cache-control max-age=31536000,public',
               'aws s3 cp s3://$BUCKET_NAME/index.html s3://$BUCKET_NAME/index.html --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html',
               'echo Creating CloudFront invalidation...',
@@ -168,12 +166,11 @@ export class PortfolioInfrastructureStack extends cdk.Stack {
           },
         },
         artifacts: {
-          files: [
-            '**/*',
-          ],
-          'base-directory': 'portfolio/out',
+          files: ['**/*'],
+          'base-directory': 'out',
         },
       }),
+
       timeout: cdk.Duration.minutes(20), // Reasonable timeout
     });
 
