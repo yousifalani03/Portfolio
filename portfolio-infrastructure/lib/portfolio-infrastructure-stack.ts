@@ -135,8 +135,7 @@ export class PortfolioInfrastructureStack extends cdk.Stack {
             commands: [
               'echo Installing dependencies...',
               "cd portfolio",
-              'npm install',
-              "npm install --save-dev typescript"
+              'npm install --include=dev',
             ],
           },
           pre_build: {
