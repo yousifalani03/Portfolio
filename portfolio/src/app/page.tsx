@@ -61,7 +61,7 @@ export default function Portfolio() {
         }
 
         .container {
-          max-width: 1000px;
+          max-width: 1400px;
           margin: 0 auto;
           padding: 0 1.5rem;
         }
@@ -350,7 +350,7 @@ export default function Portfolio() {
 
         .scroll-indicator {
           position: absolute;
-          bottom: -1.5rem;
+          bottom: 2rem;
           left: 50%;
           transform: translateX(-50%);
           animation: bounce 2s infinite;
@@ -795,7 +795,7 @@ export default function Portfolio() {
                 I'm passionate about cloud architecture and DevOps practices, with hands-on experience in AWS services, 
                 Infrastructure as Code, and security best practices. Currently pursuing my degree while building real-world 
                 projects that demonstrate scalable, secure cloud solutions. I love diving deep into emerging technologies 
-                and solving complex infrastructure challenges. I'm also deeply interested in IT and networking. From configuring systems and managing access to understanding how networks operate at scale.
+                and solving complex infrastructure challenges. I'm also deeply interested in IT and networking, especially how infrastructure, automation, and connectivity come together to support reliable, high-performing systems.
               </div>
               <div className="highlight-stats">
                 <div className="stat-item">
@@ -843,6 +843,7 @@ export default function Portfolio() {
                 <span className="tech-tag">CodeBuild</span>
                 <span className="tech-tag">Next.js</span>
                 <span className="tech-tag">TypeScript</span>
+                <span className="tech-tag">CSS</span>
               </div>
               <a href="https://github.com/yousifalani03/Portfolio" className="project-link" target='_blank'>
                 View Project →
@@ -886,7 +887,7 @@ export default function Portfolio() {
             </div>
 
             <div className="project-card">
-              <div className="project-icon">🌐</div>
+              <div className="project-icon">⚙️</div>
               <h3>Next.js Website Deployment on AWS</h3>
               <p>Deployed a static website using AWS S3 and CloudFront, fully provisioned with Terraform.
                 Configured a global CDN with public access policies, Terraform state locking via DynamoDB, and scalable infrastructure for static site hosting.</p>
