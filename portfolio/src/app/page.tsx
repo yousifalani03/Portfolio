@@ -350,7 +350,7 @@ export default function Portfolio() {
 
         .scroll-indicator {
           position: absolute;
-          bottom: 1.8rem;
+          bottom: 1.3rem;
           left: 50%;
           transform: translateX(-50%);
           animation: bounce 2s infinite;
